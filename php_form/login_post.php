@@ -3,7 +3,7 @@ session_start();
 include_once 'db.php';
 
 $login_email = $_POST['email'];
-$login_password = $_POST['password'];
+$login_password = md5($_POST['password']);
 
 $find_data = "SELECT COUNT(*) AS login_info, name, id, password FROM users WHERE email='$login_email' AND password='$login_password'";
 
@@ -13,7 +13,7 @@ $data_query_email = mysqli_query($db_connection, $find_duplicate_email);
 
 $after_assoc = mysqli_fetch_assoc($data_query);
 
-if ($_POST['email'] && $_POST['password']) {
+if ($login_email && $login_password) {
     if ($after_assoc['login_info'] == 1) {
         $_SESSION['user_name'] = $after_assoc['name'];
         $_SESSION['user_password'] = $after_assoc['password'];

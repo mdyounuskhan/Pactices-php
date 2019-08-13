@@ -2,9 +2,9 @@
 session_start();
 require_once 'db.php';
 $id = $_POST['id'];
-$password = $_POST['password'];
-$re_password = $_POST['re_password'];
-$confiram_password = $_POST['confiram_password'];
+$password = md5($_POST['password']);
+$re_password = MD5($_POST['re_password']);
+$confiram_password = md5($_POST['confiram_password']);
 
 $update =  "UPDATE users SET password ='$re_password' WHERE id ='$id'";
 
