@@ -14,12 +14,17 @@ require_once 'header.php';
                     <h5 class="card-title">
                         <?php
 
-                        if (isset($_SESSION['user_name'])) {
+                        if (isset($_SESSION['user_name']) && $_SESSION['role'] == 1) {
                             ?>
                         <h1>Hello, <?= $_SESSION['user_name'] ?></h1>
                         <?php
                         } else {
-                            header('location: login.php');
+                            if ($_SESSION['role'] == 2) {
+                                header('location: student_dashboard.php');
+                            }
+                            else {
+                                header('location: login.php');
+                            }
                         }
                         ?>
                     </h5>

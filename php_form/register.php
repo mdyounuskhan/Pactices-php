@@ -19,6 +19,14 @@ require_once 'header.php';
                     <label>Password</label>
                     <input type="password" class="form-control" placeholder="Enter Your password" name="password">
                 </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select class="form-control" name="role">
+                        <option value="">-SELECT ONE-</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Student</option>
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Register Me</button>
                 <a href="login.php">Login</a>
             </form>

@@ -45,8 +45,8 @@
                                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-sign-in si"></i>sign in</a></li>
-                                    <li><a href="#"><i class="fa fa-user-plus si"></i>register</a></li>
+                                    <li><a href="login.php"><i class="fa fa-sign-in si"></i>sign in</a></li>
+                                    <li><a href="register.php"><i class="fa fa-user-plus si"></i>register</a></li>
                                 </ul>
                             </div>
                         </div>
