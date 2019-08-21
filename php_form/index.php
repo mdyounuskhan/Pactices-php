@@ -242,7 +242,7 @@
                                 <div class="note-slick">
                                     <?php
                                     require_once "db.php";
-                                    $notice_get_query = "SELECT * FROM notices";
+                                    $notice_get_query = "SELECT * FROM notices ORDER by id DESC";
                                     $notice_get_result = mysqli_query($db_connection, $notice_get_query);
 
                                     foreach ($notice_get_result as $notice) {
