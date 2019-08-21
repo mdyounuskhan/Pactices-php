@@ -11,13 +11,13 @@ require_once 'header.php';
         <div class="col-6 offset-3">
             <div class="card  mb-3" style="max-width: 30rem;">
                 <?php
-                if (isset($_SESSION['update_status'])) {
+                if (isset($_SESSION['password_change'])) {
                     ?>
                 <div class="alert alert-success">
                     Your name has be Changed
                 </div>
                 <?php
-                    unset($_SESSION['update_status']);
+                    unset($_SESSION['password_change']);
                 }
                 ?>
                 <div class="card-header bg-success">Edit Profile</div>

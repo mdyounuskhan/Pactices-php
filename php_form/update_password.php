@@ -16,6 +16,7 @@ if ($password && $re_password && $confiram_password) {
             header('location: passwordchange.php');
             unset($_SESSION['user_password']);
             $_SESSION['user_password'] = $re_password;
+            $_SESSION['password_change'] = "Password Changed Successfully !";
         } else {
             echo "porer 2 ta mile nai";
         }
