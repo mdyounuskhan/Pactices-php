@@ -3,14 +3,28 @@ session_start();
 require_once 'header.php';
 ?>
 
-
-
-
-
-
 <div class="continar mt-3">
     <div class="row">
         <div class="col-6 offset-1">
+            <?php
+            if (isset($_SESSION['edit_notice'])) {
+                ?>
+            <div class="alert alert-success">
+                Your Notice has be Changed Successfully !!
+            </div>
+            <?php
+                unset($_SESSION['edit_notice']);
+            } else {
+                if (isset($_SESSION['delete_notice'])) {
+                    ?>
+            <div class="alert alert-danger">
+                Your Notice has be Deleted Successfully !!
+            </div>
+            <?php
+                    unset($_SESSION['delete_notice']);
+                }
+            }
+            ?>
             <h2>Add Notice List : </h2>
             <hr>
             <table class="table table-bordered">

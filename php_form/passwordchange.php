@@ -14,7 +14,7 @@ require_once 'header.php';
                 if (isset($_SESSION['password_change'])) {
                     ?>
                 <div class="alert alert-success">
-                    Your name has be Changed
+                    Your Password has be Changed Successfully
                 </div>
                 <?php
                     unset($_SESSION['password_change']);

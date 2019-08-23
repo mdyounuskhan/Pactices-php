@@ -125,7 +125,7 @@
                         $latest_news_result = mysqli_query($db_connection, $latest_news_query);
                         foreach ($latest_news_result as $latest_news) {
                             ?>
-                            <?= $latest_news['latest_news']." "." *" ?>
+                        <?= $latest_news['latest_news'] . " * " ?>
                         <?php
                         }
                         ?>
@@ -137,12 +137,17 @@
         <!--  banner starts  -->
         <section id="banner">
             <div class="slide">
+                <?php
+                $get_silder = "SELECT * FROM silders";
+                $get_silder_result = mysqli_query($db_connection, $get_silder);
+                foreach ($get_silder_result as $silder) {
+                    ?>
                 <div class="bim-1">
-                    <img src="forntend_assets/images/banner.jpg" alt="" class="img-fluid">
+                    <img src="uploads/silders/<?= $silder['silder_image']?>" alt="" class="img-fluid">
                 </div>
-                <div class="bim-2">
-                    <img src="forntend_assets/images/banner2.jpg" alt="" class="img-fluid">
-                </div>
+                <?php
+                }
+                ?>
             </div>
         </section>
         <!-- banner ends -->

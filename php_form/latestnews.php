@@ -24,6 +24,43 @@ require_once 'header.php';
     </div>
 
 
-    <?php
-    require_once 'footer.php';
-    ?>
+
+    <div class="continar mt-3">
+        <div class="row">
+            <div class="col-6 offset-1">
+                <h2>Add Latest News List : </h2>
+                <hr>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>News</th>
+                        <th>Action</th>
+                    </tr>
+                    <?php
+                    require_once "db.php";
+                    $news_get_query = "SELECT * FROM latest_news";
+                    $news_get_result = mysqli_query($db_connection, $news_get_query);
+                    $after_assoc = mysqli_fetch_assoc($news_get_result);
+
+                    foreach ($news_get_result as $news) {
+                        ?>
+
+                    <tr>
+                        <td><?= $news['latest_news']; ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="edit_news.php?id=<?= $news['id']; ?>" type="button" class="btn btn-info">Edit</a>
+                                <a href="delete_news.php?id=<?= $news['id']; ?>" type="button" class="btn btn-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <?php
+                    }
+                    ?>
+
+                </table>
+            </div>
+
+            <?php
+            require_once 'footer.php';
+            ?>
