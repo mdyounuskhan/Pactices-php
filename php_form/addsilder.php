@@ -31,13 +31,12 @@ $get_silder_result = mysqli_query($db_connection, $get_silder_query);
                         </td>
                         <td>
                             <?php
-                            if($silder['status'] == 1){
-                                echo "Active";
-                            }
-                            else {
-                                echo "Deactive";
-                            }
-                            ?>
+                                if ($silder['status'] == 1) {
+                                    echo "Active";
+                                } else {
+                                    echo "Deactive";
+                                }
+                                ?>
                         </td>
                         <td>
                             <?php
@@ -51,6 +50,8 @@ $get_silder_result = mysqli_query($db_connection, $get_silder_query);
                             <?php
                                 }
                                 ?>
+                            |
+                            <a href="silderdelete.php?id=<?= $silder['id'] ?>&silder_name=<?= $silder['silder_image'] ?>" class="btn btn-sm btn-warning">Delete</a>
                         </td>
                     </tr>
                     <?php
