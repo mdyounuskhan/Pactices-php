@@ -138,7 +138,7 @@
         <section id="banner">
             <div class="slide">
                 <?php
-                $get_silder = "SELECT * FROM silders";
+                $get_silder = "SELECT * FROM silders WHERE status = 1";
                 $get_silder_result = mysqli_query($db_connection, $get_silder);
                 foreach ($get_silder_result as $silder) {
                     ?>
