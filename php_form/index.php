@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="forntend_assets/css/slick.css">
     <link rel="stylesheet" href="forntend_assets/css/style.css">
     <link rel="stylesheet" href="forntend_assets/css/responsive.css">
+
 </head>
 
 <body>
@@ -143,7 +144,7 @@
                 foreach ($get_silder_result as $silder) {
                     ?>
                 <div class="bim-1">
-                    <img src="uploads/silders/<?= $silder['silder_image']?>" alt="" class="img-fluid">
+                    <img src="uploads/silders/<?= $silder['silder_image'] ?>" alt="" class="img-fluid">
                 </div>
                 <?php
                 }

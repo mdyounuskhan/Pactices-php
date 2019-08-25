@@ -52,6 +52,8 @@ $get_silder_result = mysqli_query($db_connection, $get_silder_query);
                                 ?>
                             |
                             <a href="silderdelete.php?id=<?= $silder['id'] ?>&silder_name=<?= $silder['silder_image'] ?>" class="btn btn-sm btn-warning">Delete</a>
+                            |
+                            <a href="silderedit.php?id=<?= $silder['id'] ?>&silder_name=<?= $silder['silder_image'] ?>" class="btn btn-sm btn-info">Edit</a>
                         </td>
                     </tr>
                     <?php
