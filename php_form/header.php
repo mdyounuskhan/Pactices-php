@@ -32,6 +32,7 @@
         <a class="nav-item nav-link active" href="addnotice.php">Add Notice<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" href="latestnews.php">Latest News<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" href="addsilder.php">Add Silder<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="principal.php">Principal<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" href="index.php" target="_blank">
           <p style="color:red">Visit Website</p><span class="sr-only">(current)</span>
         </a>

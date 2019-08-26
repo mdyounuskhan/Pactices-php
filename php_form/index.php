@@ -165,16 +165,21 @@
                         </div>
                         <!-- welcome ends -->
                     </div>
+                    <?php
+                    $principal = "SELECT * FROM principals";
+                    $principal_result = mysqli_query($db_connection, $principal);
+                    $after_assoc = mysqli_fetch_assoc($principal_result);
+                    ?>
                     <div class="princi row">
                         <div class="col-md-12 col-sm-12 p-sm-0 col-12">
                             <h2>principal's message</h2>
                         </div>
                         <div class="col-md-2 col-sm-3 p-sm-0 col-12">
-                            <img class="img-fluid" src="forntend_assets/images/princi.jpg" alt="">
+                            <img class="img-fluid" src="uploads/principal/<?= $after_assoc['image'] ?>" alt="">
                         </div>
                         <div class="message col-md-10 col-sm-9 col-12">
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. <a href="#">Read More...</a></p>
-                            <h4>sheikh john doe</h4>
+                            <p><?= $after_assoc['message'] ?> <a href="#">Read More...</a></p>
+                            <h4><?= $after_assoc['name'] ?></h4>
                             <span>principal <br>pathshala polytechnic institute</span>
 
                         </div>

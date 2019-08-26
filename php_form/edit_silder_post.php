@@ -13,9 +13,9 @@ $after_explode = explode(".", $new_upload_file);
 //to get last value
 $our_upload_file_extension = end($after_explode);
 
-$new_silder_name = $old_silder_id.".". $our_upload_file_extension;
+$new_silder_name = $old_silder_id . "." . $our_upload_file_extension;
 
-$new_upload_location = "uploads/silders/". $new_silder_name;
+$new_upload_location = "uploads/silders/" . $new_silder_name;
 
 move_uploaded_file($tem_location, $new_upload_location);
 
