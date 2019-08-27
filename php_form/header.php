@@ -8,6 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="forntend_assets/css/font-awesome.min.css">
 
   <title>Register</title>
 </head>
@@ -33,6 +34,8 @@
         <a class="nav-item nav-link active" href="latestnews.php">Latest News<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" href="addsilder.php">Add Silder<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" href="principal.php">Principal<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="addstat.php">Add Stat<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="addgallery.php">Add Gallery<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" href="index.php" target="_blank">
           <p style="color:red">Visit Website</p><span class="sr-only">(current)</span>
         </a>

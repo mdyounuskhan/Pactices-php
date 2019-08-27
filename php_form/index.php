@@ -320,31 +320,23 @@
     <section id="counter">
         <div class="count-overlay">
             <div class="container text-center">
+                <?php
+                // ORDER by id DESC LIMIT 4
+                $get_stat = "SELECT * FROM stats ORDER by id DESC LIMIT 4";
+                $get_stat_result = mysqli_query($db_connection, $get_stat);
+                ?>
                 <div class="row">
+                    <?php
+                    foreach ($get_stat_result as $stat) {
+                        ?>
                     <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-university"></i>
-                        <div class="count num">8</div>
-                        <p>depertments</p>
+                        <i class="fa <?= $stat['stat_icon']; ?>"></i>
+                        <div class="count num"><?= $stat['stat_amount']; ?></div>
+                        <p><?= $stat['stat_name']; ?></p>
                     </div>
-
-                    <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-users"></i>
-                        <div class="count num">24</div>
-                        <p>teschers</p>
-                    </div>
-
-                    <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-university"></i>
-                        <div class="count num">78</div>
-                        <p>staffs</p>
-                    </div>
-
-                    <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-university"></i>
-                        <div class="count num">318</div>
-                        <p>students</p>
-                    </div>
-
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -419,32 +411,27 @@
                 <div class="col-md-12 col-sm-12 col-12">
                     <ul>
                         <li data-filter="all">all</li>
-                        <li data-filter=".campus">campus</li>
-                        <li data-filter=".events">events</li>
-                        <li data-filter=".photo">photo gallary</li>
-                        <li data-filter=".video">video gallary</li>
+                        <li data-filter=".Campus">campus</li>
+                        <li data-filter=".Events">events</li>
+                        <li data-filter=".Classroom">Classroom</li>
                     </ul>
                 </div>
                 <div class="col-md-12 col-sm-12 col-12 cont">
+                    <?php
+                    // ORDER by id DESC LIMIT 4
+                    $get_gallery = "SELECT * FROM galleries";
+                    $get_gallery_result = mysqli_query($db_connection, $get_gallery);
+                    ?>
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-6 mix campus photo ">
-                            <img src="forntend_assets/images/gal-1.jpg" alt="">
+                        <?php
+                        foreach ($get_gallery_result as $gallery) {
+                            ?>
+                        <div class="col-md-4 col-sm-4 col-6 mix <?= $gallery['gallery_tag']?> photo ">
+                            <img src="uploads/galleries/<?= $gallery['gallery_image']?>" alt="">
                         </div>
-                        <div class="col-md-4 col-sm-4 col-6 mix events video">
-                            <img src="forntend_assets/images/gal-2.jpg" alt="">
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-6 mix campus video events">
-                            <img src="forntend_assets/images/gal-3.jpg" alt="">
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-6 mix photo video">
-                            <img src="forntend_assets/images/gal-4.jpg" alt="">
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-6 mix video events">
-                            <img src="forntend_assets/images/gal-5.jpg" alt="">
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-6 mix photo campus">
-                            <img src="forntend_assets/images/gal-6.jpg" alt="">
-                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-12 view">
